@@ -1,6 +1,6 @@
 # Laravel Multi Auth Breeze
 
-## 📌 Project Overvieww
+## 📌 Project Overview
 This is a Laravel Multi Authentication system built using Laravel Breeze.  
 It supports multiple user roles like Admin/User & Vendor with separate dashboards.
 
