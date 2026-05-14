@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: May 06, 2026 at 10:04 AM
+=======
+-- Generation Time: May 14, 2026 at 01:22 PM
+>>>>>>> a43a2bd (UI Update)
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,6 +37,17 @@ CREATE TABLE `cache` (
   `expiration` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+=======
+--
+-- Dumping data for table `cache`
+--
+
+INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
+('laravel-cache-vendore@gmail.com|127.0.0.1', 'i:1;', 1778750651),
+('laravel-cache-vendore@gmail.com|127.0.0.1:timer', 'i:1778750651;', 1778750651);
+
+>>>>>>> a43a2bd (UI Update)
 -- --------------------------------------------------------
 
 --
@@ -130,6 +145,7 @@ CREATE TABLE `password_reset_tokens` (
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `password_reset_tokens`
 --
@@ -137,6 +153,8 @@ CREATE TABLE `password_reset_tokens` (
 INSERT INTO `password_reset_tokens` (`email`, `token`, `created_at`) VALUES
 ('imkamranali2277@gmail.com', '$2y$12$C8xn/0j8R/5DxM4sI1MB2ePDcM5fMIMs3mBwKF0POoVlY73jGnkQ6', '2026-05-05 09:33:38');
 
+=======
+>>>>>>> a43a2bd (UI Update)
 -- --------------------------------------------------------
 
 --
@@ -157,9 +175,16 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+<<<<<<< HEAD
 ('n9OUQqHpBQGULW1umDlI2MKDXKDvb6uVywiVN9ha', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQVJ3M3VNdUtLWUZWcm1oQ1plWDhJdDNha0NKQWRHdk1tRVYydW43YyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MTM1OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvcmVzZXQtcGFzc3dvcmQvZmM0ZDQyMWI5MTZjNDBmNzYxMDU5M2E0NTkyZjJmYmIxNTcxODk5OWYzZTUzNTM3ZjRkNzI0MTc1ZmIxMzRjZT9lbWFpbD1pbWthbXJhbmFsaTIyNzclNDBnbWFpbC5jb20iO3M6NToicm91dGUiO3M6MTQ6InBhc3N3b3JkLnJlc2V0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1777991935),
 ('nDzQyiUeE8OiDwNg0PNvST0JCwj7uxthX7iquKtI', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoia2ZxMlB0cmJ4a0g4MzY5d3djcEhQM213UVdmenFvS2ppUW5DZ2k2TCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9fQ==', 1778054065),
 ('X12T0XC29VUWiE8CNtNYBOkOQLgdJiYqhkanppVH', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQ0xmN2JYRXJnY2g4ZXl1T0dZdmR2TjR0eDFzZDFjQnNZcVVtZW5oNCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb3Jnb3QtcGFzc3dvcmQiO3M6NToicm91dGUiO3M6MTY6InBhc3N3b3JkLnJlcXVlc3QiO319', 1777974705);
+=======
+('3riPJ84tadoj5RmNl5EGtwLcZxQmyWHr5d9RVUXx', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiclYwWnQyUVVVcXkwblpxZ0pzRHFGSTVoOVhEZjM0NTExV1h0Y1B4cSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9maWxlIjtzOjU6InJvdXRlIjtzOjEyOiJwcm9maWxlLmVkaXQiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1778757662),
+('hemqKOcwhuYoixLZu8SSLn7m2hyqiLRAEQyIW9Xo', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiMFFNRU1GWmtTUnFNdG9yMlo4U2R6TERGV0hLVGt2bVdWREp6aTZaVSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO3M6NToicm91dGUiO3M6OToiZGFzaGJvYXJkIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1778757395),
+('OpyOEu8Pj5Ecv54w1aJOAsVrnvm80rbYHjwXySDH', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicWtUVUhTYWt4NnJPbnh4M1NIYUU3Sk1nbmVzVHcwbXZUTXhaWXpPbyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC92ZW5kb3IvZGFzaGJvYXJkIjtzOjU6InJvdXRlIjtzOjE2OiJ2ZW5kb3IuZGFzaGJvYXJkIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6NDt9', 1778757574),
+('rvDINLAeDgD7HbNW7i6B8INce7js3fyabP3mSnUD', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiaTl6UVdXeUhFWXpOTHc0R25TWnhjNEFjUHRLQVNqZ1RDalVlNm1uUyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO3M6NToicm91dGUiO3M6OToiZGFzaGJvYXJkIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1778750173);
+>>>>>>> a43a2bd (UI Update)
 
 -- --------------------------------------------------------
 
@@ -184,9 +209,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+<<<<<<< HEAD
 (1, 'user', 'user@gmail.com', 'user', NULL, '$2y$12$I7VHhmEaM.rWh.3JzPcuYOPXdkLL0NkimlRpkStUsAU4YBp16fiCC', NULL, '2026-05-04 06:53:48', '2026-05-04 06:53:48'),
 (2, 'admin', 'admin@gmail.com', 'admin', NULL, '$2y$12$n33X/B5btUQfaTN04No3F.C7VYrn1WtHROpYgwARzsoG5k2nO4.v2', NULL, '2026-05-04 06:53:49', '2026-05-04 06:53:49'),
 (4, 'vendor', 'vendor@gmail.com', 'vendor', NULL, '$2y$12$HELQ5xJlaVzu1WG.fKTWPeXAAyX/f6LhEt204v24VKmOG/MK13d4a', NULL, '2026-05-04 06:54:48', '2026-05-04 06:54:48');
+=======
+(1, 'user', 'user@gmail.com', 'user', NULL, '$2y$12$H3n0Wcd1mI.hu62DLshiK.I/5iCZf.39sXAVaMrJ.p9ArY6r04Moa', '0ubFetZx85tXgoMsX1wAFmxZWPej8IZ6kmZCdopQtG3owW5rTG5xHhghJHRY', '2026-05-04 06:53:48', '2026-05-14 06:16:01'),
+(2, 'admin', 'admin@gmail.com', 'admin', NULL, '$2y$12$H3n0Wcd1mI.hu62DLshiK.I/5iCZf.39sXAVaMrJ.p9ArY6r04Moa', 'yKOIzisJDbQYnaxYLtMASNUw81pqOJG2V1I24u5r9CXeu4nGm4o4XPifTD9d', '2026-05-04 06:53:49', '2026-05-04 06:53:49'),
+(4, 'vendor', 'vendor@gmail.com', 'vendor', NULL, '$2y$12$H3n0Wcd1mI.hu62DLshiK.I/5iCZf.39sXAVaMrJ.p9ArY6r04Moa', '22pd4fPBeeoiXtGegVFU84WHdoZCybggKsidv18YCQ42AgR3MXAMCHIyLoOD', '2026-05-04 06:54:48', '2026-05-04 06:54:48');
+>>>>>>> a43a2bd (UI Update)
 
 --
 -- Indexes for dumped tables

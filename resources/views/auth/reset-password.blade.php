@@ -1,125 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.auth')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password</title>
+@section('title', 'Reset Password')
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+@section('heading')
+    Create a new<br>
+    secure password<br>
+    for your account.
+@endsection
 
-    <style>
-        body {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            height: 100vh;
-        }
+@section('content')
 
-        .card-box {
-            border-radius: 15px;
-            background: #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        }
+    <h2 class="auth-title">
+        Reset<br>Password
+    </h2>
 
-        .form-control {
-            border-radius: 10px;
-        }
+    <p class="auth-subtitle">
+        Your new password must be secure and different from previously used passwords.
+    </p>
 
-        .btn-primary {
-            border-radius: 10px;
-            padding: 10px;
-        }
-    </style>
-</head>
+    <form method="POST" action="{{ route('password.store') }}">
+        @csrf
 
-<body class="d-flex align-items-center justify-content-center">
+        <!-- Token -->
+        <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-5">
+        <!-- Email -->
+        <div class="mb-4 position-relative">
+            <label class="form-label">Email</label>
 
-            <div class="card card-box p-4">
+            <input type="email" name="email" value="{{ old('email', $request->email) }}"
+                class="form-control @error('email') is-invalid @enderror" placeholder="Enter your email" autofocus
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your registered email">
 
-                <h3 class="text-center mb-4">Reset Password</h3>
-
-                <form method="POST" action="{{ route('password.store') }}">
-                    @csrf
-
-                    <!-- Token -->
-                    <input type="hidden" name="token" value="{{ $request->route('token') }}">
-
-                    <!-- Email -->
-                    <div class="mb-3 position-relative">
-                        <label class="form-label">Email</label>
-                        <input type="email"
-                               name="email"
-                               value="{{ old('email', $request->email) }}"
-                               class="form-control @error('email') is-invalid @enderror"
-                                autofocus
-                               data-bs-toggle="tooltip"
-                               data-bs-placement="top"
-                               title="Enter your registered email">
-
-                        @error('email')
-                            <span class="invalid-tooltip">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <!-- Password -->
-                    <div class="mb-3 position-relative">
-                        <label class="form-label">New Password</label>
-                        <input type="password"
-                               name="password"
-                               class="form-control @error('password') is-invalid @enderror"
-                               
-                               data-bs-toggle="tooltip"
-                               data-bs-placement="top"
-                               title="Enter new password">
-
-                        @error('password')
-                            <span class="invalid-tooltip">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <!-- Confirm Password -->
-                    <div class="mb-3 position-relative">
-                        <label class="form-label">Confirm Password</label>
-                        <input type="password"
-                               name="password_confirmation"
-                               class="form-control @error('password_confirmation') is-invalid @enderror"
-                               
-                               data-bs-toggle="tooltip"
-                               data-bs-placement="top"
-                               title="Re-enter password">
-
-                        @error('password_confirmation')
-                            <span class="invalid-tooltip">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <!-- Submit -->
-                    <button type="submit" class="btn btn-primary w-100">
-                        Reset Password
-                    </button>
-
-                </form>
-
-            </div>
-
+            @error('email')
+                <span class="invalid-tooltip">
+                    {{ $message }}
+                </span>
+            @enderror
         </div>
-    </div>
-</div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Password -->
+        <div class="mb-4 position-relative">
+            <label class="form-label">New Password</label>
 
-<!-- Tooltip Init -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-});
-</script>
+            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
+                placeholder="Create new password" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Create strong password">
 
-</body>
-</html>
+            @error('password')
+                <span class="invalid-tooltip">
+                    {{ $message }}
+                </span>
+            @enderror
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-4 position-relative">
+            <label class="form-label">Confirm Password</label>
+
+            <input type="password" name="password_confirmation"
+                class="form-control @error('password_confirmation') is-invalid @enderror" placeholder="Confirm password"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Re-enter password">
+
+            @error('password_confirmation')
+                <span class="invalid-tooltip">
+                    {{ $message }}
+                </span>
+            @enderror
+        </div>
+
+        <!-- Back Login -->
+        <div class="mb-4 text-end">
+            <a href="{{ route('login') }}" class="auth-link">
+                Back to login
+            </a>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-submit w-100">
+            Reset Password
+        </button>
+
+    </form>
+
+@endsection
