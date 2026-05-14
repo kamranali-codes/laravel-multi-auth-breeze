@@ -29,11 +29,11 @@ It supports multiple user roles like Admin/User & Vendor with separate dashboard
 
 ### Admin
 - Email: admin@gmail.com  
-- Password: 123456  
+- Password: 12345678  
 
 ### User
 - Email: user@gmail.com  
-- Password: 123456
+- Password: 12345678
 ### Vendor
 - Email: vendor@gmail.com  
-- Password: 123456
+- Password: 12345678
